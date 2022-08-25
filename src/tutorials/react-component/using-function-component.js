@@ -42,6 +42,13 @@ export const UsingFunctionComponent = () => {
       <FunctionComponent5 title='Function Component (5)' message='Destructure Props'>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
       </FunctionComponent5>
+
+      <FunctionComponent5 title='Function Component (5)sdsds' message='Destructure Propssdsd'>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+      </FunctionComponent5>
     </div>
   );
 };

@@ -1,5 +1,31 @@
 .header {
-    height: 120px;
     padding: 8px;
     background: #f8ffa7;
+}
+.header h1 {
+    text-align: center;
+    font-size: 48px;
+    font-variant: small-caps;
+    font-weight: 300;
+    margin: 0 0 20px;
+}
+
+.header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+.header nav a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    padding: 8px 16px;
+    transition: all .3s;
+}
+.header nav a:hover {
+    background-color: hsl(65, 100%, 53%);
+}
+.header nav a.active {
+    border-bottom: 2px solid red;
 }
