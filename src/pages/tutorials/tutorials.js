@@ -23,7 +23,13 @@ const Tutorials = () => {
               <NavLink to='cc-intro'>Class Components</NavLink>
             </li>
             <li>
-              <NavLink to='event-state-cc'>Event &app; State in CC</NavLink>
+              <NavLink to='event-state-cc'>Event &amp; State in CC</NavLink>
+            </li>
+            <li>
+              <NavLink to='cc-lifecycle'>CC Lifecycle</NavLink>
+            </li>
+            <li>
+              <NavLink to='css-module'>CSS Module</NavLink>
             </li>
           </ul>
         </aside>

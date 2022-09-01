@@ -9,6 +9,9 @@ import { Layout } from './layout';
 import { TutorialsHomePage } from './tutorials';
 import { NotFoundPage } from './pages/not-found';
 import { EventStateCC } from './tutorials/event-state-cc';
+import { ClassComponentLifecycle } from './tutorials/class-component-lifecycle';
+import UseCssModule from './tutorials/css-module/css-module';
+import CalculatorPage from './pages/calculator/calculator-page';
 
 function App() {
   return (
@@ -21,7 +24,11 @@ function App() {
           <Route path='fc-intro' element={<UsingFunctionComponent />} />
           <Route path='cc-intro' element={<UsingClassComponnt />} />
           <Route path='event-state-cc' element={<EventStateCC />} />
+          <Route path='cc-lifecycle' element={<ClassComponentLifecycle />} />
+          <Route path='css-module' element={<UseCssModule />} />
         </Route>
+
+        <Route path='calculator' element={<CalculatorPage />} />
 
         <Route path='*' element={<NotFoundPage />} />
       </Routes>
