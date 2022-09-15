@@ -1,43 +1,32 @@
 import React from 'react';
-import { NavLink, Outlet } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
+import { BasePage } from '../../components/base-page';
+import { Navbar, NavItem } from '../../components/nav-bar';
 
 import './tutorials.css';
 
 const Tutorials = () => {
   return (
-    <div>
-      <h2>Tutorials</h2>
+    <BasePage title={'Tutorials'}>
       <div className='toturials-wrapper'>
         <aside className='tutorials-nav'>
-          <ul>
-            <li>
-              <NavLink to='/tutorials' end>Introduction</NavLink>
-            </li>
-            <li>
-              <NavLink to='module-intro'>React Module Intro</NavLink>
-            </li>
-            <li>
-              <NavLink to='fc-intro'>Function Components</NavLink>
-            </li>
-            <li>
-              <NavLink to='cc-intro'>Class Components</NavLink>
-            </li>
-            <li>
-              <NavLink to='event-state-cc'>Event &amp; State in CC</NavLink>
-            </li>
-            <li>
-              <NavLink to='cc-lifecycle'>CC Lifecycle</NavLink>
-            </li>
-            <li>
-              <NavLink to='css-module'>CSS Module</NavLink>
-            </li>
-          </ul>
+          <Navbar>
+            <NavItem to={'/tutorials'} content='Introduction' />
+            <NavItem to={'module-intro'} content='React Module Intro' />
+            <NavItem to={'fc-intro'} content='Function Components' />
+            <NavItem to={'cc-intro'} content='Class Components' />
+            <NavItem to={'event-state-cc'} content='Event &amp; State in CC' />
+            <NavItem to={'cc-lifecycle'} content='CC Lifecycle' />
+            <NavItem to={'css-module'} content='CSS Module' />
+            <NavItem to={'state-fc'} content='State in fc' />
+            
+          </Navbar>
         </aside>
         <div className='tutorials-content'>
           <Outlet />
         </div>
       </div>
-    </div>
+    </BasePage>
   );
 };
 

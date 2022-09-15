@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import './css-module.css';
 import camelCaseStyles from './camelCase.module.css';
 import cssNameStyles from './css-name.module.css';
+import { BaseTutorialsPage } from '../../components/base-tutorials-page';
 
 const UseCssModule = () => {
   console.log(camelCaseStyles);
@@ -13,7 +14,7 @@ const UseCssModule = () => {
   console.log(cssNameStyles['btn-primary'])
 
   return (
-    <div>
+    <BaseTutorialsPage title={'CSS Modules'}>
       <Link to='/' className='btn btn-primary'>
         <span>With CSS</span>
       </Link>
@@ -44,7 +45,7 @@ const UseCssModule = () => {
       >
         <span>With CSS Module</span>
       </Link>
-    </div>
+    </BaseTutorialsPage>
   );
 };
 

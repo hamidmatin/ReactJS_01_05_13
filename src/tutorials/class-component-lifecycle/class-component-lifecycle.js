@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { BaseTutorialsPage } from '../../components/base-tutorials-page';
 import SampleComponent from './sample-component';
 
 export default class ClassComponentLifecycle extends Component {
@@ -26,32 +27,34 @@ export default class ClassComponentLifecycle extends Component {
 
   render() {
     return (
-      <div style={{ textAlign: 'center', padding: '50px' }}>
-        <button onClick={this.toggleShowDisplayHandler}>Toggle Show Sample (display)</button>
-        <button onClick={this.toggleShowHandler}>Toggle Show Sample</button>
-        <button onClick={this.changeMessageHandler}>Change Message</button>
-        <button
-          onClick={() => {
-            console.clear();
-          }}
-        >
-          Clear Console
-        </button>
-        <div
-          style={{
-            display: this.state.display,
-            backgroundColor: '#f1f1f1',
-            padding: '30px',
-            marginTop: '30px',
-          }}
-        >
-          {/* راه استاندارد */}
-          {/* {this.state.isVisible ? <SampleComponent message={this.state.message} /> : null} */}
+      <BaseTutorialsPage title={'Class Components Lifecycle'}>
+        <div style={{ textAlign: 'center', padding: '50px' }}>
+          <button onClick={this.toggleShowDisplayHandler}>Toggle Show Sample (display)</button>
+          <button onClick={this.toggleShowHandler}>Toggle Show Sample</button>
+          <button onClick={this.changeMessageHandler}>Change Message</button>
+          <button
+            onClick={() => {
+              console.clear();
+            }}
+          >
+            Clear Console
+          </button>
+          <div
+            style={{
+              display: this.state.display,
+              backgroundColor: '#f1f1f1',
+              padding: '30px',
+              marginTop: '30px',
+            }}
+          >
+            {/* راه استاندارد */}
+            {/* {this.state.isVisible ? <SampleComponent message={this.state.message} /> : null} */}
 
-          {/* راه حرفه ای */}
-          {this.state.isVisible && <SampleComponent message={this.state.message} />}
+            {/* راه حرفه ای */}
+            {this.state.isVisible && <SampleComponent message={this.state.message} />}
+          </div>
         </div>
-      </div>
+      </BaseTutorialsPage>
     );
   }
 }

@@ -4,6 +4,7 @@ import Screen from './screen';
 import ButtomBox from './buttom-box';
 import Button from './button';
 import styles from './calculator-page.module.css';
+import { BasePage } from '../../components/base-page';
 
 class CalculatorPage extends Component {
   constructor() {
@@ -101,32 +102,35 @@ class CalculatorPage extends Component {
   };
   render() {
     return (
-      <div className={styles['calculator-page']}>
-        <Wrapper>
-          <Screen value={this.state.num ? this.state.num : this.state.res} />
-          <ButtomBox>
-            <Button value={'C'} onClick={this.resetClickHandler} />
-            <Button value={'+-'} onClick={this.invertClickHandler} />
-            <Button value={'%'} onClick={this.percentClickHandler} />
-            <Button value={'/'} onClick={this.signClickHandler} />
-            <Button value={'7'} onClick={this.numClickHandler} />
-            <Button value={'8'} onClick={this.numClickHandler} />
-            <Button value={'9'} onClick={this.numClickHandler} />
-            <Button value={'X'} onClick={this.signClickHandler} />
-            <Button value={'4'} onClick={this.numClickHandler} />
-            <Button value={'5'} onClick={this.numClickHandler} />
-            <Button value={'6'} onClick={this.numClickHandler} />
-            <Button value={'-'} onClick={this.signClickHandler} />
-            <Button value={'1'} onClick={this.numClickHandler} />
-            <Button value={'2'} onClick={this.numClickHandler} />
-            <Button value={'3'} onClick={this.numClickHandler} />
-            <Button value={'+'} onClick={this.signClickHandler} />
-            <Button value={'0'} onClick={this.numClickHandler} />
-            <Button value={'.'} onClick={this.dotClickHandler} />
-            <Button value={'='} onClick={this.equalsClickHandler} isEquals />
-          </ButtomBox>
-        </Wrapper>
-      </div>
+      <BasePage title={'Calculator'} >
+
+        <div className={styles['calculator-page']}>
+          <Wrapper>
+            <Screen value={this.state.num ? this.state.num : this.state.res} />
+            <ButtomBox>
+              <Button value={'C'} onClick={this.resetClickHandler} />
+              <Button value={'+-'} onClick={this.invertClickHandler} />
+              <Button value={'%'} onClick={this.percentClickHandler} />
+              <Button value={'/'} onClick={this.signClickHandler} />
+              <Button value={'7'} onClick={this.numClickHandler} />
+              <Button value={'8'} onClick={this.numClickHandler} />
+              <Button value={'9'} onClick={this.numClickHandler} />
+              <Button value={'X'} onClick={this.signClickHandler} />
+              <Button value={'4'} onClick={this.numClickHandler} />
+              <Button value={'5'} onClick={this.numClickHandler} />
+              <Button value={'6'} onClick={this.numClickHandler} />
+              <Button value={'-'} onClick={this.signClickHandler} />
+              <Button value={'1'} onClick={this.numClickHandler} />
+              <Button value={'2'} onClick={this.numClickHandler} />
+              <Button value={'3'} onClick={this.numClickHandler} />
+              <Button value={'+'} onClick={this.signClickHandler} />
+              <Button value={'0'} onClick={this.numClickHandler} />
+              <Button value={'.'} onClick={this.dotClickHandler} />
+              <Button value={'='} onClick={this.equalsClickHandler} isEquals />
+            </ButtomBox>
+          </Wrapper>
+        </div>
+      </BasePage>
     );
   }
 }

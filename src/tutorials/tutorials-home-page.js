@@ -1,9 +1,9 @@
 import React from 'react';
+import { BaseTutorialsPage } from '../components/base-tutorials-page';
 
 const TutorialsHomePage = () => {
   return (
-    <div>
-      <h2>React Totorials</h2>
+    <BaseTutorialsPage title={'React Totorials'}>
       <p>
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum, earum ipsa tempore placeat
         exercitationem adipisci sint eum id commodi magnam tenetur nisi, doloribus nihil deserunt
@@ -19,7 +19,7 @@ const TutorialsHomePage = () => {
         exercitationem adipisci sint eum id commodi magnam tenetur nisi, doloribus nihil deserunt
         voluptates natus odio ipsam odit.
       </p>
-    </div>
+    </BaseTutorialsPage>
   );
 };
 

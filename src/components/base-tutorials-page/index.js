@@ -1,0 +1,1 @@
+export { default as BaseTutorialsPage } from './base-tutorials-page'

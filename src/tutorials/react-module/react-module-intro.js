@@ -45,12 +45,13 @@ import { MY_PROJECT_NAME as myProjectName, default as CS, INSTITUE } from './my-
 import { showTeacherInfo, Course } from './my-module';
 
 import * as myModules from './my-module'
+import { BaseTutorialsPage } from '../../components/base-tutorials-page';
 
 export const ReactModuleIntro = () => {
   const reactCourse = new Course('React', 40);
 
   return (
-    <div>
+    <BaseTutorialsPage title={'React Modules Introduction'}>
       <h2>Project Name : {MY_PROJECT_NAME}</h2>
       <p>
         Session count: {SESSION_COUNT} , start date : {START_DATE}
@@ -77,6 +78,6 @@ export const ReactModuleIntro = () => {
       <p>
         Institue: <strong>{myModules.INSTITUE}</strong>, Teacher: <strong>{myModules.showTeacherInfo()}</strong>
       </p>
-    </div>
+    </BaseTutorialsPage>
   );
 };

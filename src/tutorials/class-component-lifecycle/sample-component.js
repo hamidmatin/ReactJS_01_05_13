@@ -97,7 +97,7 @@ export default class SampleComponent extends Component {
     console.log('this.state = ', this.state);
     console.log('snapshot = ', snapshot);
 
-    this.setState({  counter: 5 }) // has side effect
+    //this.setState({  counter: 5 }) // has side effect
 
     // if (this.state.counter !== prevState.counter) this.setState({ counter: 5 });
   }

@@ -12,6 +12,9 @@ import { EventStateCC } from './tutorials/event-state-cc';
 import { ClassComponentLifecycle } from './tutorials/class-component-lifecycle';
 import UseCssModule from './tutorials/css-module/css-module';
 import CalculatorPage from './pages/calculator/calculator-page';
+import SateInFC from './tutorials/state-in-fc/state-in-fc';
+import { CalculatorFCPage } from './pages/calculator-fc';
+import UsersPage from './pages/users/users-page';
 
 function App() {
   return (
@@ -26,9 +29,12 @@ function App() {
           <Route path='event-state-cc' element={<EventStateCC />} />
           <Route path='cc-lifecycle' element={<ClassComponentLifecycle />} />
           <Route path='css-module' element={<UseCssModule />} />
+          <Route path='state-fc' element={<SateInFC />} />
         </Route>
 
         <Route path='calculator' element={<CalculatorPage />} />
+        <Route path='calculator-fc' element={<CalculatorFCPage />} />
+        <Route path='users' element={<UsersPage />} />
 
         <Route path='*' element={<NotFoundPage />} />
       </Routes>

@@ -1,5 +1,6 @@
 import { fn } from 'jquery';
 import React, { Component } from 'react';
+import { BaseTutorialsPage } from '../../components/base-tutorials-page';
 
 export default class EventStateCC extends Component {
   testProperty = 'Test';
@@ -79,8 +80,7 @@ export default class EventStateCC extends Component {
 
   render() {
     return (
-      <div>
-        <h2>Event and State In Class Components</h2>
+      <BaseTutorialsPage title={'Event and State In Class Components'}>
         <hr />
         <button
           onClick={() => {
@@ -131,7 +131,7 @@ export default class EventStateCC extends Component {
           <button onClick={this.addSessionHandler}>add session</button>
           <button onClick={this.updateTeacherNameHandlre}>Update Teacher Name</button>
         </div>
-      </div>
+      </BaseTutorialsPage>
     );
   }
 }

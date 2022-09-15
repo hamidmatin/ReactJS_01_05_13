@@ -1,0 +1,25 @@
+.loading {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.359);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loading div {
+    border: 4px solid red;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    animation: loading 1s infinite linear;
+}
+
+@keyframes loading {
+    0%{ transform: rotate(0);}
+    100%{ transform: rotate(360deg);}
+}

@@ -1,4 +1,5 @@
 import React from 'react';
+import { BaseTutorialsPage } from '../../components/base-tutorials-page';
 import { FunctionComponent1, FunctionComponent2 } from './function-components';
 import { FunctionComponent3 } from './function-components';
 import { FunctionComponent4 } from './function-components';
@@ -11,7 +12,7 @@ export const UsingFunctionComponent = () => {
     message: 'Using Props with function call',
   });
   return (
-    <div>
+    <BaseTutorialsPage title={'React Fucntion Components'}>
       {fn1}
       <FunctionComponent1 />
       {fn2}
@@ -49,6 +50,6 @@ export const UsingFunctionComponent = () => {
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
       </FunctionComponent5>
-    </div>
+    </BaseTutorialsPage>
   );
 };

@@ -1,9 +1,10 @@
-import React, {Fragment} from 'react'
+import React from 'react'
+import { BaseTutorialsPage } from '../../components/base-tutorials-page'
 import { ClassComponent1, ClassComponent2, ClassComponent3 } from './class-component'
 
 export function UsingClassComponnt() {
   return (
-    <Fragment>
+    <BaseTutorialsPage title={'React Class Components'}>
      <ClassComponent1 />   
 
      <ClassComponent2 title='Hello React Class Component (2)' message='using props' color='red'/>
@@ -26,6 +27,6 @@ export function UsingClassComponnt() {
         </div>
       </ClassComponent3>
 
-    </Fragment>
+    </BaseTutorialsPage>
   )
 }
