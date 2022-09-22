@@ -15,6 +15,7 @@ import CalculatorPage from './pages/calculator/calculator-page';
 import SateInFC from './tutorials/state-in-fc/state-in-fc';
 import { CalculatorFCPage } from './pages/calculator-fc';
 import UsersPage from './pages/users/users-page';
+import { UserEditPage, UserNewPage } from './pages/users';
 
 function App() {
   return (
@@ -34,7 +35,18 @@ function App() {
 
         <Route path='calculator' element={<CalculatorPage />} />
         <Route path='calculator-fc' element={<CalculatorFCPage />} />
-        <Route path='users' element={<UsersPage />} />
+        <Route path='users'>
+          <Route index element={<UsersPage />} />
+          <Route path='new' element={<UserNewPage />} />
+          {/* 
+              URL Parameter Syntax
+              path='path/:parameter'
+              path='path/:parameter/path'
+              path='path/:parameter1/:parameter2'
+              path='path/:parameter1/path/:parameter2'
+          */}
+          <Route path='edit/:id' element={<UserEditPage />} />
+        </Route>
 
         <Route path='*' element={<NotFoundPage />} />
       </Routes>
