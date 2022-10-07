@@ -19,6 +19,8 @@ const Tutorials = () => {
             <NavItem to={'cc-lifecycle'} content='CC Lifecycle' />
             <NavItem to={'css-module'} content='CSS Module' />
             <NavItem to={'state-fc'} content='State in fc' />
+            <NavItem to={'using-redux'} content='Using Redux' />
+            <NavItem to={'using-context'} content='Using Context' />
             
           </Navbar>
         </aside>

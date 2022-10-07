@@ -4,10 +4,23 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+/*** Redux  ***/
+import store from './redux/store';
+import { Provider } from 'react-redux';
+
+/*** Context  ***/
+import { HelloContext, HelloContextProvider } from './context/hello-context';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   // <React.StrictMode>
-    <App />
+  <Provider store={store}>
+    {/* <HelloContext.Provider value='Hello'> */}
+    <HelloContextProvider>
+      <App />
+    </HelloContextProvider>
+    {/* </HelloContext.Provider> */}
+  </Provider>
   // </React.StrictMode>
 );
 

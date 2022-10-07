@@ -16,6 +16,8 @@ import SateInFC from './tutorials/state-in-fc/state-in-fc';
 import { CalculatorFCPage } from './pages/calculator-fc';
 import UsersPage from './pages/users/users-page';
 import { UserEditPage, UserNewPage } from './pages/users';
+import UsingRedux from './tutorials/using-redux/using-redux';
+import UsingContext from './tutorials/using-context/using-context';
 
 function App() {
   return (
@@ -31,6 +33,8 @@ function App() {
           <Route path='cc-lifecycle' element={<ClassComponentLifecycle />} />
           <Route path='css-module' element={<UseCssModule />} />
           <Route path='state-fc' element={<SateInFC />} />
+          <Route path='using-redux' element={<UsingRedux />} />
+          <Route path='using-context' element={<UsingContext />} />
         </Route>
 
         <Route path='calculator' element={<CalculatorPage />} />
